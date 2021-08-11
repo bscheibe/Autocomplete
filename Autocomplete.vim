@@ -4,7 +4,12 @@
 """ Defaults to using regex to search the current buffer for matches.
 
 
+" Setup.
 let g:autocomplete=1
+
+
+" Command for TUI use.
+ab autocomplete call ToggleAutocomplete()
 
 
 if has("gui_running")
@@ -22,7 +27,7 @@ set completeopt=menuone
 set completeopt-=preview
 set complete=.
 set omnifunc=syntaxcomplete#Complete
-" set complete+=t " Add in tag-searching when looking for matches. Very unresponsive with large tagfiles.
+" set complete+=t " Add in tag-searching when looking for matches. Poor responsiveness with large tagfiles.
 
 
 " Allow for pressing Tab to autocomplete the top menu item.
